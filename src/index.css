@@ -1,14 +1,172 @@
+/*--
+	Author: W3Layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+
+
+/*BASE STYLING*/
+
+html,
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-size: 100%;
+    background: #fff;
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
+body a {
+    text-decoration: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+a:hover {
+    text-decoration: none;
+}
+input[type="button"],
+input[type="submit"],
+input[type="text"],
+input[type="email"],
+input[type="search"] {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+p {
+    font-size:0.9em;
+    color: #8c9398;
+    line-height: 2em;
+    letter-spacing: 1px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body img {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+}
+
+.breadcrumb,
+ol {
+    margin-bottom: 0 !important;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+
+.user_container {
+    display:flex;
+    margin-bottom: 50px;
+    min-height: 700px;
+}
+
+.user_container .user_left_nav {
+    border-right: 1px solid #f8f8f8; 
+}
+
+.user_container .user_left_nav .links a {
+    display: block;
+    border-bottom: 1px solid #dddddd;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 10px 0px;
+    width: 280px;
+}
+
+.user_container  .user_right {
+    flex-grow: 1;
+    padding: 0 0 0 29px;
+}
+
+.user_container .user_nfo_panel {
+    background: #f8f8f8;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.user_container .user_nfo_panel h1 {
+    margin: 0 0 20px 0;
+    line-height: 32px;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+
+.user_container .user_nfo_panel span{
+    display: block;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+.user_product_block {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ebebeb;
+}
+
+.user_product_block .item {
+    flex-grow: 1;
+}
+
+.user_product_block .item .image{
+    height: 125px;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    margin-right: 10px;
+}
+.user_product_block .item.btn {
+    width: 0px;
+}
+
+
+.user_product_block .cart_remove_btn {
+    cursor: pointer;
+    background: #F44336;
+    display: inline-block;
+    padding: 5px 10px;
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+
+/*FORM*/
+.form_block{
+    
 }
