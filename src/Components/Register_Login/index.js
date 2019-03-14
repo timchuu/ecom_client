@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Login from './Login'
+import { Link } from 'react-router-dom'
 
 export class RegisterLogin extends Component {
   render() {
@@ -12,7 +13,7 @@ export class RegisterLogin extends Component {
                   <h5>HI</h5>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                   <div className="read mt-3">
-                            <input type="submit" value="Submit"/>
+                  <Link to="/register">Register</Link>
                         </div>
                 </div>
                <Login/>

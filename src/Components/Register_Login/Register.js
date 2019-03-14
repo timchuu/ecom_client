@@ -3,6 +3,7 @@ import FormFields from '../../utils/Forms/FormFields'
 import { update, generateData, isFormValid } from '../../utils/Forms/FormActions'
 import { connect } from 'react-redux'
 import { registerUser } from '../../store/Actions/user_actions'
+import Dialog from '@material-ui/core/Dialog'
 
  class Register extends Component {
 
@@ -183,11 +184,27 @@ updateForm = (element) =>{
                                         />
                                 </div>
                             </div>
+                            <div>
+                            { this.state.formError ?
+                                        <div className="error_label">
+                                            Please check your data
+                                        </div>
+                                    :null}   
+                            </div>
                             <button type="submit" className="mt-3 btn btn-success btn-block py-3">Register</button>
                         </form>
                     </div>
          </div>
          </div>
+
+                              <Dialog open={this.state.formSuccess}>
+                              <div className="dialog_alert">
+                                <div>Congratulations !!</div>
+                              <div>
+                                   You will be redirected to the LOGIN in a couple seconds...
+                              </div>
+                            </div>
+                              </Dialog>
       </section>
     )
   }

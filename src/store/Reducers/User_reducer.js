@@ -2,6 +2,7 @@ import {
     
     LOGIN_USER,
     REGISTER_USER,
+    AUTH_USER,
     LOGIN_USER_ERROR,
    
 } from '../Actions/types'
@@ -16,6 +17,8 @@ export default function(state = {}, action){
             return {...state, loginSuccess:action.payload}
         case LOGIN_USER_ERROR:
             return {...state, isPending:false, error:action.payload}
+        case AUTH_USER:
+            return {...state, isLoading:false, userData: action.payload}
         default:
             return state
     }

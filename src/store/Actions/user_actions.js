@@ -3,12 +3,13 @@ import {
    
     LOGIN_USER,
     REGISTER_USER,
+    AUTH_USER
     
 } from './types'
 
 
 //SERVER URLS
-import { LOGIN_SERVER, REGISTER_SERVER } from '../../api/apiUrl'
+import { LOGIN_SERVER, REGISTER_SERVER, AUTH_SERVER } from '../../api/apiUrl'
 
 //REGISTER USER
 export function registerUser(dataToSubmit){
@@ -31,5 +32,18 @@ export function loginUser(dataToSubmit){
         payload: request
     }
 }//END LOGIN
+
+//AUTH USER
+export function auth(){
+    const request = axios.get(`${AUTH_SERVER}`, {
+        headers:{Accept: "application/json", authorization:`Bearer`+localStorage.getItem('token')}
+    })
+        .then(response => response.data);
+
+        return{
+            type: AUTH_USER,
+            payload:request
+        }
+}
 
 

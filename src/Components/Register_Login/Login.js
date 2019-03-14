@@ -64,8 +64,10 @@ import { loginUser } from '../../store/Actions/user_actions'
 
     if(formIsValid){
       this.props.dispatch(loginUser(dataToSubmit)).then(response =>{
-        if(response.payload.loginSuccess){
+        if(response.payload.loginSuccess && response.payload.token){
+            const access_token = response.payload.token
             console.log(response.payload)
+            window.localStorage.setItem('token', access_token)
             this.props.history.push('/user/dashboard') 
         } else {
           this.setState({

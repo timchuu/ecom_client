@@ -17,7 +17,7 @@ const Routes = () => {
   return (
     <Switch>
       <Route path='/' exact component={HomeContainer} />
-      <Route path='/user/dashboard' exact component={Dashboard} />
+      <Route path='/user/dashboard' exact component={Auth(Dashboard, true)} />
       <Route path='/register' exact component={Register} />
       <Route path='/register_login' exact component={RegisterLogin} />
       <Route path='/shop' exact component={StoreContainer} />
