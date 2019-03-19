@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import Nav from '../nav/nav'
 
 const links =[
     {
@@ -26,6 +26,7 @@ const UserLayout = (props) => {
         ));
   return (
     <div className="container">
+  
     <div className="user_container">
     <div className="user_left_nav">
         <h2>My Account</h2>

@@ -27,7 +27,7 @@ export class DashboardContainer extends Component {
   render() {
     console.log(this.props)
     return (
-      <UserLayout>
+      <UserLayout >
       <div>
         <div className="user_nfo_panel">
           <h1>User Information</h1>

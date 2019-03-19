@@ -3,13 +3,14 @@ import {
    
     LOGIN_USER,
     REGISTER_USER,
-    AUTH_USER
+    AUTH_USER,
+    LOGOUT_USER
     
 } from './types'
 
 
 //SERVER URLS
-import { LOGIN_SERVER, REGISTER_SERVER, AUTH_SERVER } from '../../api/apiUrl'
+import { LOGIN_SERVER, REGISTER_SERVER, AUTH_SERVER , LOGOUT_SERVER} from '../../api/apiUrl'
 
 //REGISTER USER
 export function registerUser(dataToSubmit){
@@ -44,6 +45,22 @@ export function auth(){
             type: AUTH_USER,
             payload:request
         }
-}
+}//END AUTH
 
+
+//LOGOUT USER
+export function logoutUser(){
+    
+    const request = axios.post(`${LOGOUT_SERVER}`,
+    {
+        headers:{Accept: "application/json", authorization:`Bearer`+localStorage.getItem('token')}
+    })
+        .then(response =>  response.data, localStorage.removeItem('token'))
+   
+
+    return {
+        type:LOGOUT_USER,
+        payload: request
+    }
+}//END LOGOUT
 

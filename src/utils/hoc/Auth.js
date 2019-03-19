@@ -50,7 +50,7 @@ export default function(ComposedClass, reload, adminRoute = null){
 }
   function mapStateToProps(state){
     return {
-      authenticated: state.user.loginSuccess.isAuthenticated
+      authenticated: state.user.loginSuccess
       
     }
   }

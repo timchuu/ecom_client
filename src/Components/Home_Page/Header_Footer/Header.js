@@ -3,12 +3,12 @@ import Nav from '../../../utils/nav/nav'
 
 
 
-const Header = () => {
+const Header = (props) => {
   return (
     
           
     <div className="main-banner" id="home">
-       <Nav/> 
+       <Nav /> 
         <div className="banner-info">
             <p>Trending of the week</p>
             <h3 className="mb-4">Casual Shoes for Men</h3>
